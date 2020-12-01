@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}
+Sam的網站
+{% endblock %}
+{% block titlemessage %}
+  <h1>{{ post.title }}</h1>
+{% endblock  %}
+{% block content %}
+  <div class="card">
+        <div class="card-header">
+            {{ post.title }}
+        </div>
+        <div class="car-body">
+            <p style='font-family:微軟正黑體;font-size:12pt;letter-spacing:2pt;'>
+            {{ post.body | linebreaks }}</a>
+            </p>
+        </div>
+        <div class="card-footer">   
+            {{ post.pub_date }}
+        </div>
+  </div>
+{% endblock %}
